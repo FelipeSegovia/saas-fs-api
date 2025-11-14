@@ -1,14 +1,13 @@
-version: "3.8"
 services:
   mysql:
-    image: mysql:8.0
-    container_name: mysql_login_nest
+    image: mysql:8
+    container_name: mysql_saas_fs_api
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${DB_NAME}
-      MYSQL_USER: ${DB_USERNAME}
-      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${NAME_DB}
+      MYSQL_USER: ${USERNAME}
+      MYSQL_PASSWORD: ${PASSWORD}
     volumes:
       - ./mysql:/var/lib/mysql
     ports:
