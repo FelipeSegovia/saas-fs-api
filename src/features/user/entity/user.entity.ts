@@ -8,8 +8,9 @@ import {
 } from "sequelize-typescript";
 import { Role } from "src/features/roles/entity/role.entity";
 
+
 @Table({ tableName: "users", timestamps: true, paranoid: false })
-export class User extends Model<User> {
+export class User extends Model{
   @Column({
     type: DataType.UUID,
     primaryKey: true,

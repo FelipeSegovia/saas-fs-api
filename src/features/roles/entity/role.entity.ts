@@ -12,7 +12,7 @@ import { User } from "src/features/user/entity/user.entity";
   timestamps: true,
   paranoid: false,
 })
-export class Role extends Model<Role> {
+export class Role extends Model {
   @Column({
     type: DataType.UUID,
     primaryKey: true,
