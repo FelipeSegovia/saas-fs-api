@@ -1,6 +1,6 @@
 require("dotenv").config();
 
-const path = require("path");
+const path = require("node:path");
 
 module.exports = {
   development: {
@@ -9,7 +9,7 @@ module.exports = {
     database: process.env.DB_NAME,
     host: process.env.HOST,
     port: process.env.DB_PORT,
-    dialect: "mysql",
-    modelPaths: [path.resolve("src/features/**/entities/*.entity{.ts}")],
+    dialect: "postgres",
+    modelPaths: [path.resolve("src/features/**/entity/*.entity.ts")],
   },
 };
